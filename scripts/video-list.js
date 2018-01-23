@@ -1,13 +1,15 @@
 'use strict';
 
 const videoList = (function() {
-
   const generateListItem = function(video) {
     return `
     <li data-item-id="${video.id}">
       <h2>
-      <a href="https://www.youtube.com/watch?v=${video.id}"><img src="${video.thumbnail}">
-      <p>${video.title}</p></a>
+      <iframe width="560" height="315" src="https://www.youtube.com/embed/${
+        video.id
+      }" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+      <p>${video.title}</p>
+      
     </li>
   `;
   };
@@ -28,7 +30,6 @@ const videoList = (function() {
         store.setVideos(response);
         render();
       });
-      
     });
   };
 
@@ -36,11 +37,8 @@ const videoList = (function() {
     handleFormSubmit();
   };
 
-
   return {
     render,
     bindEventListeners
   };
-
-
 })();
