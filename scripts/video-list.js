@@ -6,8 +6,8 @@ const videoList = (function() {
     return `
     <li data-item-id="${video.id}">
       <h2>
-      <a href="https://www.youtube.com/watch?v=${video.id}"><img src="${video.thumbnail}"></a>
-      <p>${video.title}</p>
+      <a href="https://www.youtube.com/watch?v=${video.id}"><img src="${video.thumbnail}">
+      <p>${video.title}</p></a>
     </li>
   `;
   };
