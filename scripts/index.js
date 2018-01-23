@@ -1,5 +1,5 @@
 'use strict';
-const API_KEY = 'AIzaSyDeA7-G5-qPB3cNZL9TTwr-Nul20axwOE8';
+
 
 const store = {
   videos: []
