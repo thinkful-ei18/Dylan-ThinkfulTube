@@ -23,8 +23,8 @@ const videoList = (function() {
     $('form').on('submit', event => {
       event.preventDefault();
       const searchTerm = $('#search-term').val();
-      $('#search-term').val('');
       api.fetchVideos(searchTerm, response => {
+        $('#search-term').val('');
         const videos = decorateVideoResponse(response);
         store.setVideos(videos);
         render();
