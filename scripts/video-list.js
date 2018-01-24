@@ -33,7 +33,6 @@ const videoList = (function() {
   };
 
   const decorateVideoResponse = function(response) {
-    console.log(response);
     const results = response.items.map(item => {
       return { id: item.id.videoId, title: item.snippet.title, thumbnail: item.snippet.thumbnails.high.url, channelId: item.snippet.channelId };
     });
