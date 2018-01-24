@@ -1,16 +1,22 @@
 'use strict';
 
 const store = (function() {
-  const videos = [];
+  const videoStore = [];
 
   const setVideos = function(videos) {
     videos.forEach(video => {
-      this.videos.push(video);
+      
+      this.videoStore.push(video);
     });
   };
 
+  const getVideos = function() {
+    return this.videoStore;
+  };
+
   return {
-    videos,
+    videoStore,
+    getVideos,
     setVideos
   };
 })();
